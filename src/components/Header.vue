@@ -19,15 +19,18 @@
         </li>
       </ul>
     </div>
-
-
     <div class="headerInner">
       <div class="leftList">
         <h1>
           <img src="/images/header_logo.png" alt="하나투어" width="100" height="auto">
         </h1>
-        <span class="search">검색창</span>
-        <span class="search">실시간검색어</span>
+        <span class="search">
+          <div class="wrap">
+            <input class="search-input" type="search" placeholder="검색어를 입력해주세요" aria-label="검색어 입력란">
+            <button class="search-button" aria-label="검색"></button>
+          </div>
+        </span>
+        <span class="">실시간검색어</span>
       </div>
       <!-- <div class="myPageList">
         <div class="list">
@@ -68,85 +71,132 @@ export default {
 </script>
 
 <style scoped>
-*{
-  margin: 0;
-  padding: 0;
-}
-img{
-  max-width: 100%;
-  width: auto;
-  border: 0;
-  border-style: none;
-  vertical-align:middle;
-}
+  #app {
+    color: #333;
+  }
+  .myMenu{
+    display: block;
+    width: 100%;
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+  .myMenu ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .myMenu ul li{
+    list-style: none;
+  }
+  .myMenu ul li + li{
+    padding-left: 20px;
+  }
+  .myMenu ul li a span{
+    font-size: 12px;
+    color: #000;
+  }
+  .headerInner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .headerInner .leftList{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+  }
+  .headerInner .leftList>h1{
+    width: 150px;
+  }
+  span{
+    display: inline-block;
+    font-size: 14px;
+    color: #333;
+  }
+  .myPageList{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .myPageList .list +.list{
+    padding-left: 10px;
+  }
+  .myPageList .list{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .myPageList .list p{
+    display: blcok;
+    margin-top: 3px;  
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .search{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    max-width: 410px;
+    height: 40px;
+    border-radius: 100px;
+    border: solid 2px #111;
+  }
+  .search .wrap{
+    position: relative;
+    width: 376px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 12px 0 20px;
+    height: 40px;
+  }
+  .search .wrap .search-input{
+    display: inline-block;
+    max-width: 310px;
+    width: 100%;
+    padding: 8px 12px;
+    flex: 1;
+    outline: none;
+    border: none;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    border-radius: 100px;
+    color: #111;
+  }
+  .search .wrap input[type="search"]::-webkit-search-cancel-button {
+      display: none;
+  }
+  .search .wrap .search-input:focus {
+    width: 310px;
+    margin-right: 24px;
+    border: none !important;
+  }
 
-#app {
-  color: #333;
-}
-.myMenu{
-  display: block;
-  width: 100%;
-  width: 1200px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding-bottom: 20px;
-}
-.myMenu ul{
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.myMenu ul li{
-  list-style: none;
-}
-.myMenu ul li + li{
-  padding-left: 20px;
-}
-.myMenu ul li a span{
-  font-size: 12px;
-  color: #000;
-}
-.headerInner{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 20px;
-  width: 1200px;
-  max-width: 100%;
-  margin: 0 auto;
-}
-.headerInner .leftList{
-  display: flex;
-  align-items: center;
-}
-.headerInner .leftList>h1{
-  width: 150px;
-}
-.search{
-  padding: 0 10px;
-}
-span{
-  display: inline-block;
-  font-size: 14px;
-  color: #333;
-}
-.myPageList{
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.myPageList .list +.list{
-  padding-left: 10px;
-}
-.myPageList .list{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.myPageList .list p{
-  display: blcok;
-  margin-top: 3px;  
-  font-size: 12px;
-  font-weight: 400;
-}
+  .search .wrap .search-input::placeholder{
+    font-size: 14px;
+    color: #333;
+    font-weight: 400;
+  }
+  .search .wrap .search-button{
+    position: absolute;
+    right: 15px;
+    background: url(/images/ico-search.png) no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    background-position: center center;
+    border: none;
+    cursor: pointer;
+  }
 </style>

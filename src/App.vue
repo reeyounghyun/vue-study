@@ -16,4 +16,15 @@ export default {
 </script>
 
 <style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  img{
+    max-width: 100%;
+    width: auto;
+    border: 0;
+    border-style: none;
+    vertical-align:middle;
+  }
 </style>
