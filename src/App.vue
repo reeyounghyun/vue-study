@@ -1,30 +1,28 @@
 <template>
   <div id="app" class="wrap">
     <Header />
+    <HeaderMenu />
   </div>
 </template>
 
 <script>
 import Header  from './components/Header.vue'
+import HeaderMenu from './components/HeaderMenu.vue';
 
 export default {
   name: "App",
   components: { 
-    Header
+    Header,
+    HeaderMenu
   },
 };
 </script>
 
 <style>
-  *{
-    margin: 0;
-    padding: 0;
-  }
-  img{
-    max-width: 100%;
-    width: auto;
-    border: 0;
-    border-style: none;
-    vertical-align:middle;
+  .commLaout{
+    display: block;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
   }
 </style>
