@@ -1,17 +1,20 @@
 <template>
-  <div id="app" class="wrap">
+  <div class="wrap">
+    <HeaderBanner/>
     <Header />
     <HeaderMenu />
   </div>
 </template>
 
 <script>
+import HeaderBanner from './components/HeaderBanner.vue';
 import Header  from './components/Header.vue'
 import HeaderMenu from './components/HeaderMenu.vue';
 
 export default {
   name: "App",
   components: { 
+    HeaderBanner,
     Header,
     HeaderMenu
   },
@@ -19,7 +22,7 @@ export default {
 </script>
 
 <style>
-  .commLaout{
+  .commLayout{
     display: block;
     max-width: 1200px;
     width: 100%;

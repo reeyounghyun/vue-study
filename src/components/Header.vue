@@ -1,20 +1,10 @@
 <template>
-  <header>
+  <header id="header">
     <div class="myMenu">
       <ul>
-        <li> 
-          <a href="#" aria-label="로그인">
-            <span>로그인</span>
-          </a>
-        </li>
-        <li> 
-          <a href="#" aria-label="회원가입">
-            <span>회원가입</span>
-          </a>
-        </li>
-        <li> 
-          <a href="#" aria-label="고객센터 ">
-            <span>고객센터</span>
+        <li v-for="item in myMenuList" :key="item.label"> 
+          <a :href="item.link" :aria-label="item.label">
+            <span>{{ item.label }}</span>
           </a>
         </li>
       </ul>
@@ -30,22 +20,8 @@
             <button class="search-button" aria-label="검색"></button>
           </div>
         </span>
-        <span class="">실시간검색어</span>
+        <span>실시간검색어</span>
       </div>
-      <!-- <div class="myPageList">
-        <div class="list">
-          <img src="/images/ico-mymenu.png" alt="마이페이지" width="24" height="24">
-          <p>마이메뉴</p>
-        </div>
-        <div class="list">
-          <img src="/images/ico-reservationhistory.png" alt="예약내역" width="20" height="auto">
-          <p>예약내역</p>
-        </div>
-        <div class="list">
-          <img src="/images/ico-haeder-choice.png" alt="찜" width="24" height="auto">
-          <p>찜</p>
-        </div>
-      </div> -->
       <div class="myPageList">
         <div class="list" v-for="(item, index) in myMenuItems" :key="index">
           <img :src="item.iconSrc" :alt="item.altText" :width="item.iconWidth" :height="item.iconHeight">
@@ -60,6 +36,11 @@
 export default {
   data() {
     return {
+      myMenuList: [
+        {label: "로그인", link:"#"},
+        {label: "회원가입", link:"#"},
+        {label: "고객센터", link:"#"}
+      ],
       myMenuItems: [
         { iconSrc: "/images/ico-mymenu.png", altText: "마이페이지", title: "마이메뉴", iconWidth: "24", iconHeight: "24" },
         { iconSrc: "/images/ico-reservationhistory.png", altText: "예약내역", title: "예약내역", iconWidth: "20", iconHeight: "auto" },
@@ -86,6 +67,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    padding-top: 24px;
   }
   .myMenu ul li{
     list-style: none;
@@ -93,7 +75,7 @@ export default {
   .myMenu ul li + li{
     padding-left: 20px;
   }
-  .myMenu ul li a span{
+  .myMenu ul li span{
     font-size: 12px;
     color: #000;
   }
@@ -109,8 +91,8 @@ export default {
   .headerInner .leftList{
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    justify-content: flex-start;
+    gap: 30px;
     width: 100%;
     max-width: 800px;
   }
@@ -182,7 +164,6 @@ export default {
     margin-right: 24px;
     border: none !important;
   }
-
   .search .wrap .search-input::placeholder{
     font-size: 14px;
     color: #333;
