@@ -3,6 +3,7 @@
     <HeaderBanner/>
     <Header />
     <HeaderMenu />
+    <HomePage/>
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import HeaderBanner from './components/HeaderBanner.vue';
 import Header  from './components/Header.vue'
 import HeaderMenu from './components/HeaderMenu.vue';
+import HomePage from './components/HomePage.vue'
 
 export default {
   name: "App",
   components: { 
     HeaderBanner,
     Header,
-    HeaderMenu
+    HeaderMenu,
+    HomePage
   },
 };
 </script>
