@@ -1,81 +1,66 @@
 <template>
-  <div class="nav">
-    <a v-for="headerNav in nav" :key="headerNav">{{headerNav}}</a>
-  </div>
-
-  <!--
-    <div v-for="(room,i) in 3" :key="room">
-    <h4>{{products[i]}} 원룸</h4>
-    <span>{{price1}} 만원</span>
-  </div>
-  -->
-  <!-- 방법1 -->
-
-  <!--
-    <div v-for="(room,i) in products" :key="room">
-    <h4>{{products[i]}} 원룸</h4>
-    <span>{{price1}} 만원</span>
-  </div>
-  -->
-  <!-- 방법2 -->
-
-  <div>
-    <h4>{{products[0]}}</h4>
-    <p>10 만원</p>
-    <button @click="lengthBtn[0]++">허위매물신고</button>
-    <span>신고수 : {{ lengthBtn[0] }}</span>
-  </div>
-
-  <div>
-    <h4>{{products[1]}}</h4>
-    <p>10 만원</p>
-    <button @click="lengthBtn[1]++">허위매물신고</button>
-    <span>신고수 : {{ lengthBtn[1] }}</span>
-  </div>
-
-  <div>
-    <h4>{{products[2]}}</h4>
-    <p>10 만원</p>
-    <button @click="lengthBtn[2]++">허위매물신고</button>
-    <span>신고수 : {{ lengthBtn[2] }}</span>
+  <div class="comm">
+    <Sidebar/>
   </div>
 </template> 
 
 <script>
+  import Sidebar from './view/Sidebar.vue'
 
-export default {
-  name: 'App',
-  data(){
-    return{
-      lengthBtn:[0,0,0],
-      price1: 60,
-      price2: 30,
-      price3: 100,
-      products:['홍대원롬','신촌원롬','마포구원룸'],
-      nav:['Home','products','About']
+  export default {
+      components: {
+      Sidebar,
     }
-  },
-  components: {
   }
-}
 </script>
 
-<style>
-  .nav{
-    background-color: blue;
-    height: 30px;
-    padding: 15px;
-    color: #fff;
+<style> 
+  /* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+  */
+
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
   }
-  .nav a{
-    font-size: 18px;
-    padding: 15px;
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+    display: block;
   }
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
+  body {
+    line-height: 1;
   }
+  ol, ul {
+    list-style: none;
+  }
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  } 
 </style>
