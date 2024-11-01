@@ -4,6 +4,7 @@
     <Header />
     <HeaderMenu />
     <HomePage/>
+    <SnsMainComponent/>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import HeaderBanner from './components/HeaderBanner.vue';
 import Header  from './components/Header.vue'
 import HeaderMenu from './components/HeaderMenu.vue';
 import HomePage from './components/HomePage.vue'
+import SnsMainComponent from './components/SnsMainComponent.vue'
 
 export default {
   name: "App",
@@ -19,7 +21,8 @@ export default {
     HeaderBanner,
     Header,
     HeaderMenu,
-    HomePage
+    HomePage,
+    SnsMainComponent,
   },
 };
 </script>

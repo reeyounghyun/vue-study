@@ -2,10 +2,7 @@
   <div class="home">
     <SectionComponent title="2023 새해 여행을 위해, 우리 여행 갈까" :items="section1Items" class="section1Items">
     </SectionComponent>
-    <TebSectionComponent
-      tabText="이 겨울에 놓칠 수 없는 특별한 여행 혜택을 만나보세요!"
-      :items="specialItems"
-    />
+    <TebSectionComponent tabText="이 겨울에 놓칠 수 없는 특별한 여행 혜택을 만나보세요!" :items="specialItems"/>
     <SectionComponent title="하나국제여행제 한정특가 2주차" subtitle="우주 수상상품과 함께 보는 초청여행지_시드니" :items="section2Items" class="section2Items"/>
   </div>
 </template>
