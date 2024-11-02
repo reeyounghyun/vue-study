@@ -1,0 +1,178 @@
+.wrap{
+  background-color: #000;
+}
+.Contents{
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  gap: 40px;
+  padding: 30px;
+}
+.imageBox{
+  display: block;
+  width: 100%;
+  max-width: 240px;
+}
+.imageBox img{
+  display: block;
+  width: 100%;
+}
+.textBox h2{
+  display: block;
+  margin-bottom: 14px;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 47px;
+  letter-spacing: -.3px;
+  color: #fff;
+}
+.textBox span{
+  display: inline-block;
+  padding: 9px;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -.3px;
+  vertical-align: top;
+  color: #fff;
+  padding-left: 0;
+}
+.day{
+  position: relative;
+}
+.day span.toDay{
+  display: inline-block;
+  font-size: 15px;
+  line-height: 19px;
+  vertical-align: top;
+  color: #999;
+  letter-spacing: -.3px;
+  padding-left: 0;
+}
+.day span.toTime{
+  position: relative;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 19px;
+  vertical-align: top;
+  color: #999;
+  letter-spacing: -.3px;
+  padding-left: 10px;
+}
+.day span.toTime::after{
+  position: absolute;
+  left: -7px;
+  top: 9px;
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  margin: 8px 6px 0;
+  vertical-align: top;
+  background-color: #999;
+  border-radius: 50%;
+  content: "";
+}
+.day p{
+  overflow: hidden;
+  height: 48px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #999;
+  letter-spacing: -.3px;
+  word-break: break-all;
+}
+.btnWrap{
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.btnBox .palyAll{
+  width: 134px;
+  background-color: #ff0050;
+  border: 1px solid #ff0050;
+  color: #fff;
+}
+.btnBox .palyAll span{
+  color: #fff;
+}
+.btnBox .playRandom{
+  margin-left: 10px;
+  width: 134px;
+  background-color: #2a2a2a;
+  border: 1px solid #2a2a2a;
+}
+.btnBox .playRandom span{
+  color: #fff;
+}
+.btnBox .buyMP3{
+  margin-left: 10px;
+  width: 134px;
+  background-color: #2a2a2a;
+  border: 1px solid #2a2a2a;
+}
+.btnBox .buyMP3 span{
+  color: #fff;
+}
+.otherBut {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.otherBut button{
+  background: transparent;
+  border:1px solid #232323;
+  border-radius: 50%;
+}
+
+.likeIcon span{
+  padding: 9px;
+}
+
+.otherIcon span{
+  padding: 9px;
+}
+
+.musicList ul{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.musicList ul li{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 47px;
+}
+
+.musicList ul li input{}
+.musicList ul li img{
+  max-width: 50px;
+  height: 50px;
+  width: 50px;
+  display: block;
+}
+.musicList ul li span.title{
+  width: 577px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -.1px;
+  color: #fff;
+}
+.musicList ul li .titleItem{
+  width: 68%;
+  flex: 2 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 156px;
+  padding-right: 65px;
+  font-size: 15px;
+  letter-spacing: -.1px;
+  color: #888;
+}
+.musicList ul li .titleItem span.singer{
+  width: 172px;
+}
+.musicList ul li .titleItem span.group{
+  width: 129px;
+}
