@@ -1,20 +1,33 @@
 <template>
-  <div class="comm">
-    <Sidebar/>
+  <div class="App">
+    <div class="container">
+      <asideMenu/>
+      <Sidebar/>
+    </div>
   </div>
 </template> 
 
 <script>
   import Sidebar from './view/vibeNavr.vue'
+  import asideMenu from './view/asideMenu.vue'
 
   export default {
       components: {
-      Sidebar,
+        asideMenu,
+        Sidebar,
     }
   }
 </script>
 
 <style> 
+.container{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+
   /* http://meyerweb.com/eric/tools/css/reset/ 
     v2.0 | 20110126
     License: none (public domain)

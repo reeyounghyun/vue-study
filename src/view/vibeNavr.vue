@@ -121,6 +121,9 @@ export default {
 </script>
 
 <style scoped>
+.wrap{
+  width: 100%;
+}   
 .custom-checkbox {
   position: relative;
 }
