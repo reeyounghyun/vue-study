@@ -1,11 +1,12 @@
 <template>
   <div class="wrap">
     <HeaderBanner/>
-    <Header />
+    <Header></Header>
     <HeaderMenu />
     <HomePage/>
     <SnsMainComponent/>
-  </div>
+    <Footer></Footer>
+</div>
 </template>
 
 <script>
@@ -14,6 +15,8 @@ import Header  from './components/Header.vue'
 import HeaderMenu from './components/HeaderMenu.vue';
 import HomePage from './components/HomePage.vue'
 import SnsMainComponent from './components/SnsMainComponent.vue'
+import Footer from './components/Footer.vue';
+
 
 export default {
   name: "App",
@@ -23,6 +26,7 @@ export default {
     HeaderMenu,
     HomePage,
     SnsMainComponent,
+    Footer,
   },
 };
 </script>
