@@ -2,19 +2,23 @@
   <div class="App">
     <div class="container">
       <asideMenu/>
-      <Sidebar/>
+      <Chart/>
+      <!-- <Sidebar/> -->
     </div>
   </div>
 </template> 
 
 <script>
-  import Sidebar from './view/vibeNavr.vue'
   import asideMenu from './view/asideMenu.vue'
+  import Chart from './view/chart.vue';
+  // import Sidebar from './view/vibeNavr.vue'
+
 
   export default {
       components: {
         asideMenu,
-        Sidebar,
+        Chart,
+        // Sidebar,
     }
   }
 </script>
