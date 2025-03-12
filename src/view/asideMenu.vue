@@ -49,7 +49,6 @@
 }
 .asideMenu{
     min-width: 250px;
-    border-right: 1px solid #fff;
     box-sizing: border-box;
     padding: 20px 0 0 10px;
 }
