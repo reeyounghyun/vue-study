@@ -279,6 +279,13 @@
     font-weight: 500;
     line-height: 1.25;
 }
+.songs-list ul li .title:hover{
+    text-decoration: underline;
+}
+
+.songs-list ul li .singer:hover{
+    text-decoration: underline;
+}
 
 .songs-list ul li .title.ti{
     margin-bottom: 28px;
@@ -288,6 +295,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    align-items: center;
+    font-size: 14px;
+
 }
 </style>
