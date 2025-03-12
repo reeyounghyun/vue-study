@@ -30,6 +30,7 @@
   width: 100%;
   background-color: #000;
   color: #fff;
+  height: 100vh;
 }
 
   /* http://meyerweb.com/eric/tools/css/reset/ 
