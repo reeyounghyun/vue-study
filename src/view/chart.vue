@@ -23,10 +23,9 @@
                         <!-- 단순 텍스트 표시 -->
                         {{ tab.content }}
                         
-                        
-                        <div v-if="index === 0" class="songs-list">
+                        <div v-if="index === 0" class="songs-list common-list">
                             <!-- 인기곡 관련 HTML 컨텐츠 -->
-                            <h3>최신음악</h3>
+                            <h3>최신 음악</h3>
                             <ul>
                                 <li>
                                     <span class="imgItem">
@@ -81,8 +80,102 @@
                                 </li>
                             </ul>
                         </div>
-                        <div v-else-if="index === 1" class="listened-list">
+                        <div v-else-if="index === 1" class="listened-list common-list">
                             <!-- 다시 듣기 관련 HTML 컨텐츠 -->
+                            <h3>다시 듣기</h3>
+                            <ul>
+                                <li>
+                                    <span class="imgItem">
+                                        <div class="itembg">
+                                            <img src="../assets/image/singer-img-1.png" alt="이미지">
+                                        </div>
+                                    </span>
+                                    <strong class="title ti">Come Together</strong>
+                                    <div class="titlechild">
+                                        <p class="titlechild type">앨범</p>
+                                        <p class="titlechild icon">•</p>
+                                        <p class="titlechild singer">비틀즈</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="imgItem">
+                                        <div class="itembg">
+                                            <img src="../assets/image/singer-img-2.png" alt="이미지">
+                                        </div>
+                                    </span>
+                                    <strong class="title ti">wait for the elash</strong>
+                                    <div class="titlechild">
+                                        <p class="titlechild type">앨범</p>
+                                        <p class="titlechild icon">•</p>
+                                        <p class="titlechild singer">기리보이</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="imgItem">
+                                        <div class="itembg">
+                                            <img src="../assets/image/singer-img-3.png" alt="이미지">
+                                        </div>
+                                    </span>
+                                    <strong class="title">신호등</strong>
+                                    <div class="titlechild">
+                                        <p class="titlechild type">싱글</p>
+                                        <p class="titlechild icon">•</p>
+                                        <p class="titlechild singer">이무진</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="imgItem">
+                                        <div class="itembg">
+                                            <img src="../assets/image/singer-img-4.png" alt="이미지">
+                                        </div>
+                                    </span>
+                                    <strong class="title">Tomboy</strong>
+                                    <div class="titlechild">
+                                        <p class="titlechild type">싱글</p>
+                                        <p class="titlechild icon">•</p>
+                                        <p class="titlechild singer">(여자)아이들</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="imgItem">
+                                        <div class="itembg">
+                                            <img src="../assets/image/singer-img-5.png" alt="이미지">
+                                        </div>
+                                    </span>
+                                    <strong class="title">INVU </strong>
+                                    <div class="titlechild">
+                                        <p class="titlechild type">싱글</p>
+                                        <p class="titlechild icon">•</p>
+                                        <p class="titlechild singer">태연</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="imgItem">
+                                        <div class="itembg">
+                                            <img src="../assets/image/singer-img-6.png" alt="이미지">
+                                        </div>
+                                    </span>
+                                    <strong class="title">우효</strong>
+                                    <div class="titlechild">
+                                        <p class="titlechild type">싱글</p>
+                                        <p class="titlechild icon">•</p>
+                                        <p class="titlechild singer">민들레</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="imgItem">
+                                        <div class="itembg">
+                                            <img src="../assets/image/singer-img-7.png" alt="이미지">
+                                        </div>
+                                    </span>
+                                    <strong class="title">Spicy</strong>
+                                    <div class="titlechild">
+                                        <p class="titlechild type">싱글</p>
+                                        <p class="titlechild icon">•</p>
+                                        <p class="titlechild singer">에스파</p>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -91,6 +184,7 @@
 </template>
 
 <script>
+
     export default {
         data(){
             return{
@@ -104,7 +198,7 @@
     }
 </script>
 
-<style >
+<style scoped>
 .wrap{
     padding: 20px 0 0 80px;
 }
@@ -182,19 +276,19 @@
     margin: 30px 0;
 }
 
-.songs-list h3{
+.common-list h3{
     display: block;
     font-size: 26px;
     font-weight: bold;
     padding-bottom: 15px;
 }
-.songs-list ul{
+.common-list ul{
     display: flex;
     align-items: flex-start;
     gap: 20px;
 }
 
-.songs-list ul li .imgItem{
+.common-list ul li .imgItem{
     overflow: hidden;
     position: relative;
     display: block;
@@ -204,8 +298,9 @@
     border-radius: 2px;
     /* 추가: 전환 효과를 위한 기본 상태 설정 */
     transition: all 0.3s ease;
+    cursor: pointer;
 }
-.songs-list ul li .imgItem::after{
+.common-list ul li .imgItem::after{
     content: '';
     position: absolute;
     top:50%;
@@ -214,7 +309,7 @@
     font-weight: bold;
     transform: translate(-50%, -50%);
 }
-.songs-list ul li .imgItem:hover::after{
+.common-list ul li .imgItem:hover::after{
     display: block;
     content: '';
     position: absolute;
@@ -234,11 +329,11 @@
 }
 
 /* 추가: hover 시 after 요소가 완전히 표시되도록 */
-.songs-list ul li .imgItem:hover::after {
+.common-list ul li .imgItem:hover::after {
     opacity: 1;
 }
 
-.songs-list ul li .imgItem .itembg{
+.common-list ul li .imgItem .itembg{
     background: #fff;
     height: 100%;
     position: absolute;
@@ -249,29 +344,30 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.songs-list ul li .imgItem .itembg .textTop{
+
+.common-list ul li .imgItem .itembg .textTop{
     line-height: 1.2;
 }
 
-.songs-list ul li .imgItem strong{
+.common-list ul li .imgItem strong{
     display: flex;
     font-size: 17px;
     color: #000;
     font-weight: 600;
 }
-.songs-list ul li .imgItem span{
+.common-list ul li .imgItem span{
     display: block;
     font-size: 19px;
     color: #000;
     font-weight: 400;
 }
-.songs-list ul li .imgItem span.ko{
+.common-list ul li .imgItem span.ko{
     font-size: 10px;
     color: #333;
     font-weight: 400;
 }
 
-.songs-list ul li .title{
+.common-list ul li .title{
     display: block;
     margin-bottom: 10px;
     margin-top: 18px;
@@ -279,23 +375,81 @@
     font-weight: 500;
     line-height: 1.25;
 }
-.songs-list ul li .title:hover{
+.common-list ul li .title:hover{
     text-decoration: underline;
 }
 
-.songs-list ul li .singer:hover{
+.common-list ul li .singer:hover{
     text-decoration: underline;
 }
 
-.songs-list ul li .title.ti{
+.common-listt ul li .title.ti{
     margin-bottom: 28px;
 }
 
-.songs-list ul li .titlechild{
+.common-list ul li .titlechild{
     display: flex;
     align-items: center;
     gap: 5px;
     font-size: 14px;
+    cursor: pointer;
+}
 
+/* 인기음악 */
+.listened-list ul li .imgItem{
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-color: #525151;
+    border-radius: 2px;
+    /* 추가: 전환 효과를 위한 기본 상태 설정 */
+    
+    transition: all 0.3s ease;
+}
+
+.listened-list  ul li .imgItem::after{
+    content: '';
+    position: absolute;
+    top:50%;
+    left: 50%;
+    font-size: 46px;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+}
+
+.listened-list ul li .imgItem .itembg{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+.listened-list ul li .imgItem:hover::after{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 152px;
+    height: 36%;
+    background: linear-gradient(to bottom, rgb(44 44 44 / 37%), rgba(0, 0, 0, 0));
+    top: 27px;
+    right: 0;
+    z-index: 10;
+    border-radius: 0 0 20px 20px;
+    z-index: 10;
+
+    /* 추가: hover 효과에 대한 transition */
+    transition: opacity 0.5s, transform 0.3s;
+    /* 추가: hover 시 시작할 때 약간 투명하게 */
+    opacity: 0;
+}
+
+.listened-list ul li .imgItem:hover::after {
+    opacity: 1;
 }
 </style>
