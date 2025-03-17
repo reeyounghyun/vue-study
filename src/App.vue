@@ -24,13 +24,19 @@
 </script>
 
 <style> 
+body, html {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+}
+
+
 .container{
   display: flex;
   justify-content: flex-start;
   width: 100%;
   background-color: #000;
   color: #fff;
-  height: 100vh;
 }
 
   /* http://meyerweb.com/eric/tools/css/reset/ 
