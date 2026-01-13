@@ -1,0 +1,21 @@
+{
+  "Vue Options API Default": {
+    "prefix": "vue",
+    "body": [
+      "<template>",
+      "  <div>",
+      "  </div>",
+      "</template>",
+      "",
+      "<script>",
+      "export default {",
+      "",
+      "}",
+      "</script>",
+      "",
+      "<style scoped>",
+      "</style>"
+    ],
+    "description": "Vue Options API template"
+  }
+}

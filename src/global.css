@@ -1,105 +1,345 @@
-/* box-sizing 규칙을 명시합니다. */
-*,
-*::before,
-*::after {
+/* 전역 스타일로 모든 컴포넌트에 영향을 줌 */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: "Pretendard", Sans-serif;
+  font-size: 16px;
+}
+
+body * {
   box-sizing: border-box;
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  font-family: "Noto Sans KR", sans-serif;
-}
-
-img{
-  max-width: 100%;
-  width: auto;
-  border: 0;
-  border-style: none;
-  vertical-align:middle;
-}
-
-
-/* 폰트 크기의 팽창을 방지합니다. */
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-}
-
-/* 기본 여백을 제거하여 작성된 CSS를 더 잘 제어할 수 있습니다. */
-body,
 h1,
 h2,
 h3,
 h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin-block-end: 0;
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
 }
 
-/* list를 role값으로 갖는 ul, ol 요소의 기본 목록 스타일을 제거합니다. */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 ul,
 ol,
-li{
+li {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
-/* 핵심 body의 기본값을 설정합니다. */
-body {
-  min-height: 100vh;
-  line-height: 1.5;
+table {
+  border-collapse: collapse;
 }
 
-/* 제목 요소와 상호작용하는 요소에 대해 line-height를 더 짧게 설정합니다. */
+html,
+body,
+div,
+span,
+object,
+iframe,
 h1,
 h2,
 h3,
 h4,
-button,
-input,
-label {
-  line-height: 1.1;
-}
-
-/* 제목에 대한 text-wrap을 balance로 설정합니다. */
-h1,
-h2,
-h3,
-h4 {
-  text-wrap: balance;
-}
-
-/* 클래스가 없는 기본 a 태그 요소는 기본 스타일을 가져옵니다. */
-a {
-  text-decoration: none;
-  text-decoration-skip-ink: auto;
-  color: currentColor;
-}
-
-/* 이미지 관련 작업을 더 쉽게 합니다. */
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
 img,
-picture {
-  display: block;
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: normal;
 }
 
-/* input 및 button 항목들이 글꼴을 상속하도록 합니다. */
+
+a {
+    box-sizing: border-box;
+    background: transparent;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+div,
+p,
+li,
+span,
+em,
+strong,
+a {
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+body {
+    font-family: "SUITE", "sans-serif", "Arial";
+    font-family: 'SF Pro';
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    color: #000;
+    font-size: 14px;
+    background: transparent;
+    height: 100vh;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border: 0 none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
 input,
-button,
-textarea,
-select {
-  font: inherit;
+select,
+textarea {
+    vertical-align: middle;
+    box-sizing: border-box;
+    border-radius: 0;
+    font-family: SUITE, "sans-serif", "Arial";
+    font-family: 'SF Pro';
+    font-size: 1em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
-/* 행 속성이 없는 textarea가 너무 작지 않도록 합니다. */
-textarea:not([rows]) {
-  min-height: 10em;
+input {
+    margin: 0;
+    cursor: pointer;
 }
 
-/* 고정된 모든 항목에는 여분의 스크롤 여백이 있어야 합니다. */
-:target {
-  scroll-margin-block: 5ex;
+input::-ms-clear {
+    display: none;
+}
+
+input:focus {
+    outline: 1px solid var(--Dark-2, #424A53);
+    border: 1px solid var(--Dark-2, #424A53);
+}
+
+input:focus-visible {
+    outline: 1px solid var(--Dark-2, #424A53);
+    border: 1px solid var(--Dark-2, #424A53);
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+input[type="radio" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: inherit;
+    box-sizing: border-box;
+}
+
+img,
+fieldset {
+    border: 0;
+}
+
+ul,
+ol,
+li {
+    list-style-type: none;
+}
+
+li img {
+    vertical-align: top;
+}
+
+button {
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    background: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    font-family: "SUITE", "sans-serif", "Arial";
+    font-family: 'SF Pro';
+    font-size: 1em;
+
+    font-size: 0;
+}
+
+a {
+    text-decoration: none;
+    font-family: "SUITE", "sans-serif", "Arial";
+    font-family: 'SF Pro';
+}
+
+img {
+    vertical-align: middle;
+    font-size: 0;
+}
+
+p,
+span {
+    word-break: auto-phrase;
+}
+
+.text-indent {
+    text-indent: -9999px;
+}
+
+/* dark theme */
+/* [data-theme="dark"] {
+    --font-color: #fff;
+    --link-color: #00DE5A;
+    --link-white-color: #c1bfbd;
+    --bg-color: #333;
+} */
+
+.inputBox input:focus-visible{
+    outline:none;
+    border:none;
+}
+
+.inputBox input:focus{
+    outline:none;
+    border:none;
+}
+
+img {
+    display: block;
+    /* margin: 0 auto; */
+}
+
+img.light {
+    display: block;
+}
+
+img.dark {
+    display: none;
+}
+
+.dark-mode img.light{
+    display: none;
+}
+
+.dark-mode img.dark{
+    display: block;
 }
